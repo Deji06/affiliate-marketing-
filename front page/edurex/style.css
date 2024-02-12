@@ -1,0 +1,301 @@
+@font-face {
+  font-family: MetaPro;
+  src: url(./Font/MetaPro-Normal.otf) format("truetype");
+  /* url(./Font/MetaPro-Bold.otf) font('truetype'); */
+}
+
+body {
+  font-family: "MetaPro Regular", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-image: url(./images/Artboard\ 11@2x.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 70%;
+  height: fit-content;
+  padding: 10px 20px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+nav .image-text {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+nav .edurex-logo {
+  width: 150px;
+}
+
+/* Hero section */
+.hero-section {
+  width: 70%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.hero-section .hero-subtitle {
+  background-color: #4FC3CA;
+  box-shadow: 0px 5px 0px 0px rgba(10, 105, 106, 1);
+  color: #fff;
+  display: block;
+  width: 400px;
+  margin: auto;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+.hero-section .hero-title {
+  color: #0f7d79;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: 10px;
+  line-height: 35px;
+  /* display: inline; */
+}
+
+.hero-title span{
+  text-transform: uppercase;
+  margin-top: -10px;
+}
+
+/* people-image section */
+.people-image {
+  position: relative;
+  /* margin-top: 40px; */
+}
+
+.people-image span {
+  position: absolute;
+  background-color: #0f7d79;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  left: 100px;
+  bottom: 10px;
+}
+
+.people-image .people {
+  width: 300px;
+}
+
+/* middle section */
+.middle-section {
+  width: 550px;
+  margin: 50px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* course-grid */
+.course-grid {
+  border: 2px solid #0A696A;
+  box-shadow: -7px 7px 0px 0px rgba(11, 110, 111, 1);
+  position: relative;
+  height: 120px;
+  width: 80%;
+  margin: auto;
+}
+
+.course-grid .course-grid-title {
+  background-color: #0f7d79;
+  text-align: center;
+  color: #fff;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 200px;
+  top: -25px;
+  padding: 5px;
+}
+.course-grid .course-categories {
+  /* border: 1px solid blue; */
+  width: 700px;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 0.8rem;
+}
+
+.course {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 200px;
+  margin-left: 20px;
+}
+
+.course .box {
+  width: 10px;
+  height: 10px;
+  background-color: #0A696A;
+}
+
+.course span{
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+/*footer */
+.footer {
+  margin-top: 70px;
+  position: relative;
+  height: fit-content;
+}
+
+.footer .key-features {
+  color: #0A696A;
+  text-transform: uppercase;
+}
+
+.footer .features {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5px;
+  column-gap: 10px;
+  font-size: 0.8rem;
+
+}
+
+/* qr code */
+.footer .qr-code {
+  width: 100px;
+  display: grid;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.qr-code .scan {
+  width: 50px;
+}
+
+.qr-code .scan-text {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+
+
+@media (max-width:425px) {
+  /* container */
+  .container {
+    max-width: 375px;
+  }
+
+  /* nav */
+  nav {
+    max-width: 425px;
+    margin: 0;
+  }
+
+  .image-text img {
+    width: 120px;
+  }
+
+  nav .edurex-logo {
+    width: 120px;
+  }
+/* hero section */
+.hero-section {
+  width: fit-content;
+}
+
+.hero-section .hero-subtitle {
+  font-size: 14px;
+  width: fit-content;
+  padding: 10px ;
+}
+
+.hero-section .hero-title {
+  font-size: 30px;
+}
+/* people-image */
+.people-image {
+  position: relative;
+}
+
+.people-image span {
+  left: 0;
+}
+/* middle-section */
+.middle-section {
+  width: fit-content;
+  line-height: 20px;
+}
+
+
+/* course-grid */
+.course-grid {
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  flex-direction: column;
+  height: fit-content;
+}
+
+.course-grid .course-categories {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 220px;
+
+}
+.footer .features {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.footer .qr-code {
+  width: fit-content;
+  height: fit-content;
+  top: 150px;
+  left: 10px;
+  bottom: 0;
+}
+}
+@media (max-width:375px) {
+  .hero-section {
+    width: 100%;
+  }
+
+  .hero-section .hero-subtitle {
+    width: fit-content;
+  }
+
+  .people-image {
+    width: 100%;
+  }
+
+  .people-image .people {
+    width: 100%;
+  }
+}
+
+
