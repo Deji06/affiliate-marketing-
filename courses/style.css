@@ -1,96 +1,123 @@
 @font-face {
-    font-family: MetaPro;
-    src: url(./Font/MetaPro-Normal.otf) format('truetype'),
+    font-family: 'MetaPro';
+    src: url(./Font/MetaPro-Normal.otf) format('otf'),
+    url(./Font/MetaPro-Bold.otf) format('otf')
 }
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-body{
+body {
     font-size: 0.8rem;
     font-family: MetaPro;
 }
-.container{
+.container {
     box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-    height: 1500px;
+    height: 1950px;
     display: flex;
-    width: 90%;
+    width: fit-content;
     margin: 20px auto;
     border-radius: 5px;
     border: 15px solid #46c1ca ;
+    
 }
-.left{
+/* left container */
+.left {
     width: 50%;
-    /* border: 1px solid red; */
 }
-.course-con{
-    /* border: 1px solid green; */
+
+.left .con {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.left .course-con {
     display: flex;
-    width: 400px;
-    margin-left: 10px;
+    width: 100%;
     justify-content: space-between;
     margin-top: 20px;
     padding: 10px;
+    text-align: center;
 }
-.info-text{
-    margin-top: 10px;
-    margin-left: 20px;
-    /* border: 1px solid red; */
-    text-transform: uppercase;
+
+.course-con span {
+    font-size: 1.25rem;
+    text-align: center;
 }
-.box-container{
+
+.box-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    margin-left: 20px;
-    width: 400px;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 0.8rem;
 }
-.box{
-    width: 9px;
+
+.box {
+    width: 10px;
     height: 10px;
     background-color: #4FC3CA;
 }
-.boxes{
+
+.boxes {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* margin-left: 20px; */
+    margin-left: 10px;
 }
-.boxes a{
+
+.boxes a {
     text-decoration: none;
     color: black;
+    text-transform: capitalize;
 }
+
 .boxes a:hover{
     color: #4FC3CA;
 }
 
-.right{
+/* right container */
+.right {
     width: 50%;
-    /* border: 1px solid blue; */
+}
+.right .con {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 10px;
 }
 
-.next{
-    margin-top: 30px;
-    /* margin-left: 20px; */
+.right .course-con {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 0px;
 }
-.course-con p{
+
+.course-con span {
     color:  #006869;
     text-transform: uppercase;
     font-weight: bold;
 }
 .text{
+    margin-top: 20px;
     margin-left: 10px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 900;
+    font-size: 1.2rem;
+    font-family: 'MetaPro';
 }
 
 
 @media (max-width:500px) {
-    body{
-        font-size: 0.8rem;
+    body {
+        font-size: 1rem;
     }
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -98,39 +125,72 @@ body{
         margin-top: 0;
         border-radius: 0;
     }
-    .course-con{
-        margin-left: 50px;
-        width: 1000px;
+    .left , 
+    .right{
+        margin-top: 10px;
+        width: 100%;
     }
-    .box-container{
-        /* border: 1px solid green; */
-        width: 350px;
+    .left .con,
+    .right .con {
+        width: 80%;
+        margin: auto;
     }
-    
+    .left .course-con{
+        width: 80%;
+
+    }
+    .box-container {
+        margin-left: 10px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .right .course-con {
+        display: none;
+    }
+   
 }
 
-@media (max-width:320px){
-    .container{
+@media (max-width:320px) {
+    .container {
         border: none;
     }
-    .box-container{
+
+    .box-container {
         width: 250px;
         margin-left: 10px;
     }
-    .text{
-        /* border: 1px solid red; */
+    .text {
         width:250px;
         margin-left: 30px;
     }
     .right .course-con{
         display: none;
     }
-    .next{
-        margin-top: 20px;
+}
+
+@media (max-width:425px) {
+    .left {
+        width: 100%; 
+    }
+
+    .right {
+        width: 100%;
+    }
+    .right .course-con {
+        display: none;
+    }
+    .right .con {
+        margin: auto;
+
+    }
+    .course-con {
+        width: 100%;
+        margin-left: 0;
     }
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
     body{
         font-size: 1rem;
     }
